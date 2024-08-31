@@ -1,0 +1,320 @@
+*{
+    color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+:root{
+    --bg-color:#eff2f5;
+    --textcolor:#ffffff;
+    --nav-cilor:#003366;
+    --but-color:#ef2300;
+}
+/* navbar */
+nav{
+    color: var(--textcolor);
+    position: fixed;
+    width: 97%;
+    background-color: var(--nav-cilor);
+    height: 80px;
+    width: 100%;
+}
+.logo{
+    color: var(--textcolor);
+    font-size: 1.5rem;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.active{
+    background-color: var(--but-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+nav ul li a{
+    color: var(--textcolor);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* headnews */
+.headline{
+    padding:8em 2em 4em 10em;
+    background-image: linear-gradient(rgba(44, 41, 41, 0.747),rgba(0, 0, 0, 0.671)),url(./Images/messi.jpg);
+    background-size: cover;
+}
+.headline h1{
+    color: var(--textcolor);
+    font-size: 2rem;
+}
+.headline p{
+    color: white;
+    font-size: 1.7rem;
+    width: 50%;
+}
+.button{
+    color: var(--textcolor);
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--but-color);
+    padding: 15px;
+    margin: 20px 0px;
+}
+/* subnews container */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+    padding: 1rem ; 
+    margin: 0em 3em 0em 3em;
+}
+#new{
+    background-color: var(--textcolor);
+}
+/* categories button */
+.sports, .entertainment, .technology{
+    color: var(--textcolor);
+    text-transform: uppercase;
+    font-size: .6rem;
+    padding: 8px 8px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(255, 145, 0);
+    margin: 5px 0px;
+    border-radius: 15px;
+}
+.entertainment{
+    background-color: blueviolet;
+}
+.technology{
+    background-color: rgb(0, 162, 255);
+}
+.news{
+    border-radius: .1rem;
+    padding: 2px;
+    background-color: var(--bg-color);
+    margin: 10px;
+    display: block;
+}
+.details{
+    padding: 10px 30px 30px 30px;
+}
+.news1{
+    grid-column: 1/3; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+.news7{
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+.news img{
+    width: 100%;
+    padding: 0%;
+}
+.news2 h1, .news6 h1{
+    color: var(--textcolor);
+}
+.news2
+{
+    background-image: linear-gradient(rgba(44, 42, 42, 0.521),rgba(34, 33, 33, 0.507)),url(./Images/rona.jpg);
+    background-position: center;
+}
+.news6
+{
+    background-image: linear-gradient(rgba(44, 42, 42, 0.521),rgba(34, 33, 33, 0.507)),url(./Images/Cristiano\ Ronaldo.jpg);
+    background-position: center;
+    background-size: contain;
+}
+.news1 h1{
+    display: inline-block;
+}
+.news1 img{
+    width: 100%;
+    display: inline-block;
+}
+.news7 h1{
+    display: inline-block;
+}
+.news7 img{
+    width: 100%;
+    display: inline-block;
+}
+.news2 img{
+    display: none;
+}
+.news6 img{
+    display: none;
+}
+/* endbar */
+.endbar{
+    background-color: var(--bg-color);
+    border-top: 1px solid black;
+    text-align: center;
+}
+.link h1{
+    color: blue;
+    font-size: 32px;
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+.link a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.link ol li{
+    list-style: none;
+    display: block;
+    color: var(--secondary-color);
+}
+.link li{
+    margin: 30px;
+}
+
+.endbar p{
+    border-top: 1px solid black;
+    padding: 25px;
+}
+
+@media (max-width: 900px){
+/* navigation */
+.logo{
+    font-size: 1.1rem;
+    padding: 0 30px;
+}
+.checkbtn{
+    display: block;
+}
+ul{
+    position: fixed; 
+    width: 100%;
+    height: 100vh;
+    background-color: #003366e7;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 7;
+}
+nav ul li{
+    padding-top: 1.5em;
+    display: block;
+}
+nav ul li a{
+    color: var(--textcolor);
+    border-radius: 20px;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+
+/* headnews */
+.headline{
+    padding:6em 2em 2em 3em;
+}
+.headline h1{
+    font-size: 2rem;
+}
+.headline p{
+    font-size: 1rem;
+}
+.button{
+    padding: 8px;
+    margin: 10px 0px;
+}
+/* subnews container */
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(100px,1fr));
+    padding: .7rem ; 
+    margin: .7em 1.5em;
+}
+/* categories button */
+.sports, .entertainment, .technology{
+    font-size: .5rem;
+}
+/* news */
+.news{
+    padding: 10px;
+    margin: 10px;
+}
+.news1{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: .5rem;
+}
+.news7{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: .5rem;
+}
+.news2 img{
+    display: block;
+}
+.news6 img{
+    display: block;
+}
+.news2 h1, .news6 h1{
+    color: rgb(0, 0, 0);
+}
+.news2
+{
+    background-image: none;
+}
+.news6
+{
+    background-image: none;
+}
+}
+
+@media (max-width: 500px){
+.headline{
+    background-position: center;
+}
+/* subnews container */
+.container{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(100px,1fr));
+    padding: .3rem ; 
+    margin: .5em .2em;
+}
+/* news */
+.news{
+    padding: 0%;
+    margin: 10px;
+}
+.details{
+    padding: 10px 10px 20px 10px;
+}
+.news2 img{
+    display: block;
+}
+.news6 img{
+    display: block;
+}
+}
